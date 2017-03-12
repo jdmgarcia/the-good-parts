@@ -32,6 +32,6 @@ function load(typeStatement) {
       break;
 
     default:
-      console.log('No option available in switch: ' + typeStatement);
+      console.log('No available option in switch: ' + typeStatement);
   }
 }
