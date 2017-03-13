@@ -1,32 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>The Good Parts - Javascript</title>
-  <script src="js/test.js"></script>
+    <meta charset="utf-8">
+    <title>The Good Parts - Javascript</title>
+    <script src="js/test.js"></script>
 </head>
 <body>
-  <header>
-    <h1><strong>The Good Parts</strong> -  Javascript</h1>
-  </header>
-  <main>
+<header>
+    <h1><strong>The Good Parts</strong> - Javascript</h1>
+</header>
+<main>
     <section>
-      <h2>Statement</h2>
-      <div id="statements">
-        <p>
-          <label for="inputSwitch">Put a number:</label>
-          <input id="inputSwitch" name="inputSwitch" type="text">
-          <button onclick="load('switch');">Load</button>
-        </p>
-        <p>
-          Click to view object <em>statement</em> properties:
-          <button onclick="load('for');">View object</button>
-        </p>
-
-        <div id="switch"></div>
-        <div id="for"></div>
-      </div>
+        <h2>Chapter 1. Grammar</h2>
+        <div id="grammar">
+            <p>
+                Put a number to calculate decreasing secuence:
+            </p>
+            <p>
+                <label for="inputSwitch">Num: </label>
+                <input id="inputSwitch" name="inputSwitch" type="text">
+                <button onclick="load('switch');">Load</button>
+            </p>
+            <p id="switch"></p>
+            <p>
+                Click to view the <em>node</em> properties:
+                <button onclick="load('for');">View object</button>
+            </p>
+            <p id="for"></p>
+            <p>
+                Add two numbers:
+            </p>
+            <p>
+                <label for="inputException1">Num1: </label>
+                <input id="inputException1" name="inputException1" type="text">
+                <label for="inputException2">Num2: </label>
+                <input id="inputException2" name="inputException2" type="text">
+                <button onclick="load('exception');">Calculate</button>
+                <br>
+                <em>If you don't write two numbers, it will stamp a exception message.</em>
+            </p>
+            <p id="exception"></p>
+        </div>
     </section>
-  </main>
+    <section>
+        <h2>Chapter 2. Objects</h2>
+        <div id="objects">
+
+        </div>
+    </section>
+</main>
 </body>
 </html>
