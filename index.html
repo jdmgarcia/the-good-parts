@@ -12,7 +12,7 @@
 </header>
 <main>
     <section>
-        <h2>Chapter 1. Grammar</h2>
+        <h2>Chapter 2. Grammar</h2>
         <div id="grammar">
             <p>
                 Put a number to calculate decreasing secuence:
@@ -44,7 +44,7 @@
         </div>
     </section>
     <section>
-        <h2>Chapter 2. Objects</h2>
+        <h2>Chapter 3. Objects</h2>
         <div id="objects">
             <ul>
                 <li><strong>Reference: </strong>Objects are passed around by reference.</li>
@@ -53,6 +53,71 @@
             </ul>
         </div>
     </section>
+    <section>
+        <h2>Chapter 4. Functions</h2>
+        <div id="functions" data-test="data test ok!">
+            <p>There are four pattern of invocations in JavaScript:</p>
+            <ul>
+                <li>The method invocation pattern</li>
+                <li>The function invocation pattern</li>
+                <li>The constructor invocation pattern</li>
+                <li>The apply invocation pattern</li>
+            </ul>
+            <p><strong>Remember: </strong><em>this</em> always binds to HIS object. If this function is not a method, it has a prototype whitch is bound of.</p>
+
+            <p>
+                Reflection about Closure:
+
+                <blockquote style="color:#ff6961;">Avoid creating functions within a loop.</blockquote>
+            </p>
+            <p>
+                <strong>Callbacks</strong>. It's better to call asynchronously functions than synchronously. For example:
+
+                <pre>
+                    request = prepare_the_request();
+                    send_request_asynchronously(request, function(response) {
+                        display(response);
+                    });
+                </pre>
+
+                And this is bad:
+
+                <pre>
+                    resquest = prepare_the_request();
+                    response = send_request_synchronously(request);
+                    display(response);
+                </pre>
+            </p>
+        </div>
+    </section>
+    <section>
+        <h2>Break 1. Logical operators</h2>
+        <div id="logical_operators">
+            <p>The logical operators may return a non-Boolean value:</p>
+            <ul>
+                <li>
+                    <strong>(expr1 && expr2) </strong>
+                    Returns <em>expr1</em> if it can be converted to <em>false</em>; otherwise, returns <em>expr2</em>.
+                    Thus, when used with Boolean values, && returns <em>true</em> if both operands are <em>true</em>;
+                    otherwise, returns <em>false</em>.
+                </li>
+                <li>
+                    <strong>(expr1 || expr2) </strong>
+                    Returns <em>expr1</em> if it can be converted to <em>true</em>; otherwise, returns <em>expr2</em>.
+                    Thus, when used with Boolean values, || returns <em>true</em> if either operand is <em>true</em>.
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h2>Chapter 4. Cascade</h2>
+        <div id="cascade">
+            <span>Testing cascade.</span>
+        </div>
+    </section>
 </main>
+<script src="js/functions.js"></script>
+<script src="js/scope.js"></script>
+<script src="js/modules.js"></script>
 </body>
 </html>

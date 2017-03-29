@@ -46,4 +46,3 @@ console.log ('name of another_stooge: ' + another_stooge.name);
 
 delete another_stooge.name;
 console.log ('name of another_stooge: ' + another_stooge.name);
-
