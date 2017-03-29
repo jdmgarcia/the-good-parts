@@ -62,12 +62,12 @@ fade(document.body);
 
 // Own example about closure
 //
-var gExecute1 = null;
-var gExecute2 = null;
-var gExecute3 = null;
+let gExecute1 = null;
+let gExecute2 = null;
+let gExecute3 = null;
  
 function createClosure() {
-    var num = 10;
+    let num = 10;
     gExecute1 = function () { console.log(num); };
  
     num++;
@@ -89,23 +89,23 @@ function additionNumber(a, b)
     };
 }
  
-var execute = additionNumber(10, 40);
+let execute = additionNumber(10, 40);
  
 setTimeout(execute, 3000);  //Después de 3 segundos se muestra 
                             // en pantalla: 10 + 40 = 50
 
 function Constructor(msjPrivado, msjPublico) {
  
-     var propiedadPrivada = msjPrivado;
+     let propiedadPrivada = msjPrivado;
      this.propiedadPublica = msjPublico;
  
-     var that = this; 
+     let that = this; 
     /*
        La variable 'that' será guardada en el closure para ser 
        utilizada en su momento por la función metodoPrivado()
     */
  
-     var metodoPrivado = function () {
+     let metodoPrivado = function () {
          console.log(propiedadPrivada);
          console.log(that.propiedadPublica);
      };
@@ -116,15 +116,17 @@ function Constructor(msjPrivado, msjPublico) {
 }
  
  
-var objMsg = new Constructor("mensaje privado", "mensaje público");
+let objMsg = new Constructor("mensaje privado", "mensaje público");
 objMsg.metodoPublico();
  
-console.log('Value of objMsg.propiedadPublica: ' + objMsg.propiedadPublica);
  /*
     Muestra en pantalla dos mensajes seguidos:
     mensaje privado
     mensaje público
 */
+
+console.log('Value of objMsg.propiedadPublica: ' + objMsg.propiedadPublica);
+
 
 
 

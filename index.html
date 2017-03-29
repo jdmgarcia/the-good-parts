@@ -68,7 +68,25 @@
             <p>
                 Reflection about Closure:
 
-                <blockquote>Avoid creating functions within a loop.</blockquote>
+                <blockquote style="color:#ff6961;">Avoid creating functions within a loop.</blockquote>
+            </p>
+            <p>
+                <strong>Callbacks</strong>. It's better to call asynchronously functions than synchronously. For example:
+
+                <pre>
+                    request = prepare_the_request();
+                    send_request_asynchronously(request, function(response) {
+                        display(response);
+                    });
+                </pre>
+
+                And this is bad:
+
+                <pre>
+                    resquest = prepare_the_request();
+                    response = send_request_synchronously(request);
+                    display(response);
+                </pre>
             </p>
         </div>
     </section>
@@ -91,8 +109,15 @@
             </ul>
         </div>
     </section>
+    <section>
+        <h2>Chapter 4. Cascade</h2>
+        <div id="cascade">
+            <span>Testing cascade.</span>
+        </div>
+    </section>
 </main>
 <script src="js/functions.js"></script>
 <script src="js/scope.js"></script>
+<script src="js/modules.js"></script>
 </body>
 </html>
